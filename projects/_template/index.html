@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ============================================================
+         PROJECT INFO - THAY ĐỔI CÁC DÒNG BÊN DƯỚI
+         ============================================================ -->
+    <title>Tad.atelier - [TÊN PROJECT]</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-427ELYXSX3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-427ELYXSX3');
+    </script>
+
+    <!-- Fancybox for image gallery -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
+    <link href="/assets/css/styles.css" rel="stylesheet">
+    <link href="/assets/css/project.css" rel="stylesheet">
+    <style>
+        .fancybox__backdrop {
+            background: var(--fancybox-bg, rgba(24, 24, 27, .98));
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div class="navbar navbar-expand navbar-light bg-light d-flex bd-highlight">
+        <div class="me-auto">
+            <a class="navbar-brand" href="/">Tad.atelier</a>
+        </div>
+        <div class="p-2">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about-us">About Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container-fluid project">
+        <div class="row">
+            <!-- ============================================================
+                 PHẦN MÔ TẢ (DESCRIPTION) - THAY ĐỔI TẠI ĐÂY
+                 ============================================================ -->
+            <div class="col-lg-3 description">
+                <!-- TÊN PROJECT - ví dụ: The Clay Mui Ne Resort -->
+                <h1 class="fs-2">[TÊN PROJECT]</h1>
+
+                <!-- NĂM THỰC HIỆN - ví dụ: 2024 -->
+                <p class="mt-2 mb-0 pb-0">[NĂM]</p>
+
+                <!-- ĐỊA ĐIỂM - ví dụ: Mũi Né, Phan Thiết -->
+                <p class="mt-1">Location: [ĐỊA ĐIỂM]</p>
+
+                <div class="mb-1">
+                    <!-- MÔ TẢ TIẾNG ANH - Đoạn văn giới thiệu dự án -->
+                    <p>
+                        [MÔ TẢ TIẾNG ANH - VIẾT 1-3 ĐOẠN VỀ DỰ ÁN]
+                    </p>
+                </div>
+            </div>
+
+            <!-- ============================================================
+                 PHẦN ẢNH (PHOTOS) - THAY ĐỔI TẠI ĐÂY
+                 ============================================================ -->
+            <!--
+                 CÁCH THÊM ẢNH MỚI:
+                 1. Copy folder ảnh vào: /assets/projects/[SỐ]-[TÊN-LOWERCASE]/
+                 2. Copy 1 đoạn row bên dưới và thay đổi:
+                    - data-src: đường dẫn ảnh (bắt đầu bằng /)
+                    - src: đường dẫn ảnh (giống data-src)
+                 3. class="img-fluid" cho ảnh bình thường
+                    class="img-fluid img-horizontal" cho ảnh ngang trong khung cao
+                    class="img-fluid img-vertical" cho ảnh dọc trong khung rộng
+            -->
+            <div class="col-lg-9 photos">
+                <!-- HÀNG ẢNH 1 -->
+                <div class="row">
+                    <div class="col-md-6 p-1">
+                        <a data-src="/assets/projects/[SỐ]-[TÊN]/[FILE-ẢNH-1].JPG" data-fancybox="gallery">
+                            <img src="/assets/projects/[SỐ]-[TÊN]/[FILE-ẢNH-1].JPG" class="img-fluid float-end">
+                        </a>
+                    </div>
+                    <div class="col-md-6 p-1">
+                        <a data-fancybox="gallery" data-src="/assets/projects/[SỐ]-[TÊN]/[FILE-ẢNH-2].JPG">
+                            <img src="/assets/projects/[SỐ]-[TÊN]/[FILE-ẢNH-2].JPG" class="img-fluid float-start">
+                        </a>
+                    </div>
+                </div>
+                <!-- HÀNG ẢNH 2 -->
+                <div class="row">
+                    <div class="col-md-6 p-1">
+                        <a data-src="/assets/projects/[SỐ]-[TÊN]/[FILE-ẢNH-3].JPG" data-fancybox="gallery">
+                            <img src="/assets/projects/[SỐ]-[TÊN]/[FILE-ẢNH-3].JPG" class="img-fluid float-end">
+                        </a>
+                    </div>
+                    <div class="col-md-6 p-1">
+                        <a data-fancybox="gallery" data-src="/assets/projects/[S�]-[TÊN]/[FILE-ẢNH-4].JPG">
+                            <img src="/assets/projects/[SỐ]-[TÊN]/[FILE-ẢNH-4].JPG" class="img-fluid float-start">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+</body>
+
+</html>

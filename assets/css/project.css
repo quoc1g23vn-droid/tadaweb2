@@ -1,0 +1,46 @@
+
+.project .description{
+  padding-left:80px; 
+  padding-right:60px;
+  font-size: 0.85rem;
+}
+.project .photos{
+  padding-right:60px;
+}
+
+
+@media only screen and (min-width: 1030px) {
+  .navbar{
+    padding-left:80px; 
+    padding-right:60px;
+  }
+  .project .photos img{
+    width: 500px;
+  }
+  
+  .project .photos img.img-vertical{
+    width: 500px;
+    height: 750px;
+  }
+  .project .photos img.img-horizontal{
+    object-fit: cover; /* contain the image */
+    object-position: center; /* Center the image within the element */
+    height: 100%;  
+  }
+}
+@media only screen and (max-width: 1030px) {
+  .project .photos, .project .description{
+    width: 100%;
+  }
+  .navbar{
+    padding-left:10px; padding-right:10px;
+  }
+  .project .description{
+    padding-left:20px; 
+    padding-right:20px;
+  }
+  .project .photos{
+    padding-left:20px; 
+    padding-right:20px;
+  }
+}

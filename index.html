@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Tad.atelier</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@300;500&display=swap" rel="stylesheet">
+    <link href="/assets/css/styles.css" rel="stylesheet">
+    <link href="/assets/css/slideshow.css" rel="stylesheet">
+
+    <meta property="og:url"
+        content="www.tad-a.vn" />
+    <meta property="og:title" content="Tad.atelier" />
+    <meta property="og:description" content="Tad.atelier is the architecture firm for design and practice including architecture, interiors, urban planning based in Ho Chi Minh city, Vietnam." />
+    <meta property="og:image"
+        content="//www.tad-a.vn/assets/projects/00-front-page/00-tada.jpg" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-427ELYXSX3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-427ELYXSX3');
+    </script>
+    <style>
+        a,
+        a.nav-link,
+        a.nav-link:hover {
+            color: white;
+            padding: 0rem 1rem;
+            font-weight: 300;
+        }
+
+        a.home-link {
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container" onclick="goToProject()">
+        <div class="fixed-top justify-content-center p-2">
+            <ul class="nav justify-content-center" style="padding-top: 0.25rem;">
+                <li class="nav-item">
+                    <a class="nav-link home-link" href="/">Tad.atelier</a>
+                </li>
+            </ul>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="/projects">Projects</a>
+                </li>
+                <li class="text-white">|</li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about-us">About Us</a>
+                </li>
+            </ul>
+        </div>
+        <ul class="slideshow">
+            <li>
+                <span></span>
+            </li>
+            <li><span></span></li>
+            <li><span></span></li>
+            <li><span></span></li>
+            <li><span></span></li>
+            <li><span></span></li>
+            <li><span></span></li>
+            <li><span></span></li>
+        </ul>
+    </div>
+    <script>
+        function goToProject() {
+            window.location.href = '/projects';
+        }
+    </script>
+
+</html>
