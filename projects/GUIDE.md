@@ -72,10 +72,109 @@ Mỗi ảnh cần 2 thay đổi:
 </a>
 ```
 
-**Mẹo về class ảnh:**
-- `img-fluid` - ảnh bình thường
-- `img-fluid img-horizontal` - ảnh ngang trong khung cao
-- `img-fluid img-vertical` - ảnh dọc trong khung rộng
+---
+
+## Các Loại Layout Ảnh
+
+### Layout 1: 2 Ảnh Cạnh Nhau (Phổ Biến)
+
+Mỗi hàng chứa 2 ảnh bằng nhau.
+
+```html
+<div class="row">
+    <div class="col-md-6 p-1">
+        <a data-src="..." data-fancybox="gallery">
+            <img src="..." class="img-fluid float-end">
+        </a>
+    </div>
+    <div class="col-md-6 p-1">
+        <a data-src="..." data-fancybox="gallery">
+            <img src="..." class="img-fluid float-start">
+        </a>
+    </div>
+</div>
+```
+
+**Sơ đồ:**
+```
+┌─────────────────────┬─────────────────────┐
+│  Ảnh 1 (float-end) │  Ảnh 2 (float-start)│
+└─────────────────────┴─────────────────────┘
+```
+
+---
+
+### Layout 2: 1 Ảnh Dọc + 2 Ảnh Ngang (Đặc Biệt)
+
+Một ảnh dọc chiếm cột trái, 2 ảnh ngang xếp dọc trong cột phải.
+
+```html
+<div class="row">
+    <!-- Cột trái: 1 ảnh dọc -->
+    <div class="col-md-6 p-1">
+        <a data-src="..." data-fancybox="gallery">
+            <img src="..." class="img-fluid float-end">
+        </a>
+    </div>
+    
+    <!-- Cột phải: 2 ảnh ngang xếp dọc -->
+    <div class="col-md-6 p-1">
+        <div class="h-50">
+            <a data-src="..." data-fancybox="gallery">
+                <img src="..." class="img-fluid img-horizontal">
+            </a>
+        </div>
+        <div class="h-50 pt-2">
+            <a data-src="..." data-fancybox="gallery">
+                <img src="..." class="img-fluid img-horizontal">
+            </a>
+        </div>
+    </div>
+</div>
+```
+
+**Sơ đồ:**
+```
+┌─────────────────────┬─────────────────────┐
+│                     │  ┌─────────────────┐│
+│                     │  │  Ảnh ngang 1    ││
+│   ẢNH DỌC          │  │  (h-50)         ││
+│   (float-end)       │  ├─────────────────┤│
+│                     │  │  Ảnh ngang 2    ││
+│                     │  │  (h-50, pt-2)   ││
+│                     │  └─────────────────┘│
+└─────────────────────┴─────────────────────┘
+```
+
+---
+
+## Bảng Tổng Hợp Classes
+
+### Container Classes
+
+| Class | Ý nghĩa |
+|-------|---------|
+| `row` | Hàng mới, chứa các cột |
+| `col-md-6` | Cột chiếm 50% chiều rộng (md = medium trở lên) |
+| `p-1` | Padding nhỏ xung quanh (khoảng cách giữa ảnh) |
+| `h-50` | Chiều cao 50% của container cha |
+| `pt-2` | Padding-top để tạo khoảng cách giữa 2 ảnh |
+
+### Image Classes
+
+| Class | Dùng khi |
+|-------|----------|
+| `img-fluid` | Ảnh tự co giãn theo container (luôn cần) |
+| `float-end` | Ảnh bên trái trong cặp 2 ảnh |
+| `float-start` | Ảnh bên phải trong cặp 2 ảnh |
+| `img-horizontal` | Ảnh ngang cần lấp đầy chiều cao |
+| `img-vertical` | Ảnh dọc trong khung rộng (tỷ lệ 2:3) |
+
+### Fancybox Link
+
+```html
+<a data-src="ĐƯỜNG-DẪN-ẢNH" data-fancybox="gallery">
+```
 
 ---
 
