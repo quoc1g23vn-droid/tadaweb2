@@ -12,10 +12,10 @@
 const projectsData = [
     {
         id: 15,
-        name: "[TÊN PROJECT 15]",
-        year: "[NĂM]",
-        folder: "[TÊN-FOLDER-LOWERCASE-15]",
-        thumbnail: "/assets/projects/[SỐ]-[TÊN]/[FILE-FRONT-PAGE].JPG"
+        name: "Jinjee House",
+        year: "2024",
+        folder: "15-jinjee-house",
+        thumbnail: "/assets/projects/15-jinjee-house/00.Front-Page.JPG"
     },
     {
         id: 14,
