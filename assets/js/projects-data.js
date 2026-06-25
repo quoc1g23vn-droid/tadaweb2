@@ -11,6 +11,13 @@
 
 const projectsData = [
     {
+        id: 16,
+        name: "Sen House",
+        year: "2024",
+        folder: "16-sen-house",
+        thumbnail: "/assets/projects/15-jinjee-house/00.Front-Page.JPG"
+    },
+    {
         id: 15,
         name: "Jinjee House",
         year: "2024",
