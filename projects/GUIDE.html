@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUIDE - Thêm Project Mới</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #bdc3c7;
+            padding-bottom: 8px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        h3 {
+            color: #555;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            margin-bottom: 10px;
+        }
+        
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 5px;
+        }
+        
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin-bottom: 15px;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+            color: inherit;
+        }
+        
+        .layout-box {
+            background: #f9f9f9;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        
+        .layout-box h3 {
+            color: #2980b9;
+            margin-top: 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        
+        th {
+            background: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        .checklist {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .checklist li:before {
+            content: "☐ ";
+            color: #3498db;
+            font-size: 1.2em;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 30px 0;
+        }
+        
+        .highlight {
+            background: #fff3cd;
+            padding: 10px;
+            border-left: 4px solid #ffc107;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📋 Hướng Dẫn Thêm Project Mới</h1>
+        
+        <p>Hướng dẫn này giúp bạn thêm một dự án mới vào website Tad.atelier một cách nhanh chóng và dễ dàng.</p>
+        
+        <hr>
+        
+        <h2>Tổng Quan</h2>
+        
+        <p>Mỗi project cần <strong>2 thành phần</strong>:</p>
+        
+        <ol>
+            <li><strong>Folder ảnh</strong> - chứa hình ảnh dự án</li>
+            <li><strong>Folder project</strong> - chứa file <code>index.html</code> và thông tin dự án</li>
+        </ol>
+        
+        <hr>
+        
+        <h2>Các Bước Thêm Project Mới</h2>
+        
+        <h3>Bước 1: Chuẩn Bị Ảnh</h3>
+        
+        <ol>
+            <li>Tạo folder mới trong <code>/assets/projects/</code></li>
+            <li>Đặt tên theo format: <code>[SỐ]-[TÊN-THƯỜNG-KHÔNG-DẤU]</code></li>
+        </ol>
+        
+        <p><strong>Ví dụ:</strong></p>
+        <pre><code>/assets/projects/15-nha-mai/</code></pre>
+        
+        <ol start="3">
+            <li>Copy tất cả ảnh của dự án vào folder này</li>
+            <li><strong>Đặt tên ảnh front-page</strong> là <code>00.Front-Page.JPG</code> (sẽ dùng làm thumbnail)</li>
+        </ol>
+        
+        <hr>
+        
+        <h3>Bước 2: Tạo Folder Project</h3>
+        
+        <ol>
+            <li>Copy folder template từ <code>/projects/_template/</code></li>
+            <li>Đặt tên folder mới <strong>TRÙNG VỚI</strong> tên folder trong <code>projects-data.js</code></li>
+        </ol>
+        
+        <p><strong>Ví dụ:</strong></p>
+        <pre><code>/projects/15-nha-mai/</code></pre>
+        
+        <ol start="3">
+            <li>Mở file <code>index.html</code> trong folder mới và chỉnh sửa:</li>
+        </ol>
+        
+        <h4>3.1. Sửa phần &lt;head&gt; (dòng 9)</h4>
+        
+        <pre><code>&lt;title&gt;Tad.atelier - [TÊN PROJECT CỦA BẠN]&lt;/title&gt;</code></pre>
+        
+        <h4>3.2. Sửa phần mô tả (dòng ~56-60)</h4>
+        
+        <pre><code>&lt;h1 class="fs-2"&gt;[TÊN PROJECT]&lt;/h1&gt;
+&lt;p class="mt-2 mb-0 pb-0"&gt;[NĂM]&lt;/p&gt;
+&lt;p class="mt-1"&gt;Location: [ĐỊA ĐIỂM]&lt;/p&gt;</code></pre>
+        
+        <h4>3.3. Sửa mô tả tiếng Anh (dòng ~65-75)</h4>
+        
+        <p>Thay đoạn <code>[MÔ TẢ TIẾNG ANH]</code> bằng nội dung giới thiệu dự án.</p>
+        
+        <h4>3.4. Sửa phần ảnh (từ dòng ~90 trở đi)</h4>
+        
+        <p>Mỗi ảnh cần 2 thay đổi:</p>
+        <ul>
+            <li><code>data-src</code>: đường dẫn ảnh</li>
+            <li><code>src</code>: đường dẫn ảnh (giống data-src)</li>
+        </ul>
+        
+        <pre><code>&lt;a data-src="/assets/projects/15-nha-mai/FILE-ẢNH.JPG" data-fancybox="gallery"&gt;
+    &lt;img src="/assets/projects/15-nha-mai/FILE-ẢNH.JPG" class="img-fluid"&gt;
+&lt;/a&gt;</code></pre>
+        
+        <hr>
+        
+        <h2>Các Loại Layout Ảnh (COPY & PASTE)</h2>
+        
+        <hr>
+        
+        <div class="layout-box">
+            <h3>Layout 1: 2 Ảnh Bất Kỳ Cạnh Nhau</h3>
+            
+            <pre><code>&lt;div class="row"&gt;
+    &lt;div class="col-md-6 p-1"&gt;
+        &lt;a data-src="/assets/projects/[FOLDER]/[ANH-1].JPG" data-fancybox="gallery"&gt;
+            &lt;img src="/assets/projects/[FOLDER]/[ANH-1].JPG" class="img-fluid float-end"&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="col-md-6 p-1"&gt;
+        &lt;a data-src="/assets/projects/[FOLDER]/[ANH-2].JPG" data-fancybox="gallery"&gt;
+            &lt;img src="/assets/projects/[FOLDER]/[ANH-2].JPG" class="img-fluid float-start"&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            
+            <p><strong>Dùng cho:</strong> 2 ảnh bình thường, hoặc 1 ngang + 1 dọc (tự co giãn theo tỷ lệ gốc)</p>
+        </div>
+        
+        <hr>
+        
+        <div class="layout-box">
+            <h3>Layout 2: 1 Ảnh Dọc (Trái) + 2 Ảnh Ngang (Phải)</h3>
+            
+            <pre><code>&lt;div class="row"&gt;
+    &lt;!-- Cột trái: 1 ảnh dọc --&gt;
+    &lt;div class="col-md-6 p-1"&gt;
+        &lt;a data-src="/assets/projects/[FOLDER]/[ANH-DOC].JPG" data-fancybox="gallery"&gt;
+            &lt;img src="/assets/projects/[FOLDER]/[ANH-DOC].JPG" class="img-fluid float-end"&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Cột phải: 2 ảnh ngang xếp dọc --&gt;
+    &lt;div class="col-md-6 p-1"&gt;
+        &lt;div class="h-50"&gt;
+            &lt;a data-src="/assets/projects/[FOLDER]/[ANH-NGANG-1].JPG" data-fancybox="gallery"&gt;
+                &lt;img src="/assets/projects/[FOLDER]/[ANH-NGANG-1].JPG" class="img-fluid img-horizontal"&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="h-50 pt-2"&gt;
+            &lt;a data-src="/assets/projects/[FOLDER]/[ANH-NGANG-2].JPG" data-fancybox="gallery"&gt;
+                &lt;img src="/assets/projects/[FOLDER]/[ANH-NGANG-2].JPG" class="img-fluid img-horizontal"&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            
+            <p><strong>Dùng cho:</strong> 1 ảnh dọc lớn bên trái, 2 ảnh ngang nhỏ bên phải</p>
+        </div>
+        
+        <hr>
+        
+        <div class="layout-box">
+            <h3>Layout 3: 2 Ảnh Ngang (Trái) + 1 Ảnh Dọc (Phải)</h3>
+            
+            <pre><code>&lt;div class="row"&gt;
+    &lt;!-- Cột trái: 2 ảnh ngang xếp dọc --&gt;
+    &lt;div class="col-md-6 p-1"&gt;
+        &lt;div class="h-50"&gt;
+            &lt;a data-src="/assets/projects/[FOLDER]/[ANH-NGANG-1].JPG" data-fancybox="gallery"&gt;
+                &lt;img src="/assets/projects/[FOLDER]/[ANH-NGANG-1].JPG" class="img-fluid img-horizontal"&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="h-50 pt-2"&gt;
+            &lt;a data-src="/assets/projects/[FOLDER]/[ANH-NGANG-2].JPG" data-fancybox="gallery"&gt;
+                &lt;img src="/assets/projects/[FOLDER]/[ANH-NGANG-2].JPG" class="img-fluid img-horizontal"&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Cột phải: 1 ảnh dọc --&gt;
+    &lt;div class="col-md-6 p-1"&gt;
+        &lt;a data-src="/assets/projects/[FOLDER]/[ANH-DOC].JPG" data-fancybox="gallery"&gt;
+            &lt;img src="/assets/projects/[FOLDER]/[ANH-DOC].JPG" class="img-fluid float-start"&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            
+            <p><strong>Dùng cho:</strong> 2 ảnh ngang nhỏ bên trái, 1 ảnh dọc lớn bên phải</p>
+        </div>
+        
+        <hr>
+        
+        <div class="layout-box">
+            <h3>Layout 4: 2 Ảnh Dọc Cố Định (500×750px) Cạnh Nhau</h3>
+            
+            <pre><code>&lt;div class="row"&gt;
+    &lt;div class="col-md-6 p-1"&gt;
+        &lt;a data-src="/assets/projects/[FOLDER]/[ANH-DOC-1].JPG" data-fancybox="gallery"&gt;
+            &lt;img src="/assets/projects/[FOLDER]/[ANH-DOC-1].JPG" class="img-fluid img-vertical float-end"&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="col-md-6 p-1"&gt;
+        &lt;a data-src="/assets/projects/[FOLDER]/[ANH-DOC-2].JPG" data-fancybox="gallery"&gt;
+            &lt;img src="/assets/projects/[FOLDER]/[ANH-DOC-2].JPG" class="img-fluid img-vertical float-start"&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            
+            <p><strong>Dùng cho:</strong> 2 ảnh dọc cố định kích thước 500×750px</p>
+        </div>
+        
+        <hr>
+        
+        <div class="layout-box">
+            <h3>Layout 5: Ảnh Đơn (Full Width)</h3>
+            
+            <pre><code>&lt;div class="row"&gt;
+    &lt;div class="col-12 p-1"&gt;
+        &lt;a data-src="/assets/projects/[FOLDER]/[ANH].JPG" data-fancybox="gallery"&gt;
+            &lt;img src="/assets/projects/[FOLDER]/[ANH].JPG" class="img-fluid"&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            
+            <p><strong>Dùng cho:</strong> 1 ảnh chiếm toàn bộ chiều rộng</p>
+        </div>
+        
+        <hr>
+        
+        <h2>Sơ Đồ Tổng Hợp</h2>
+        
+        <pre><code>Layout 1: [    Ảnh 1    ][    Ảnh 2    ]
+
+Layout 2: [  ẢNH DỌC  ][ Ngang 1     ]
+                    [ Ngang 2     ]
+
+Layout 3: [ Ngang 1    ][  ẢNH DỌC  ]
+          [ Ngang 2    ][           ]
+
+Layout 4: [ Ảnh Dọc   ][ Ảnh Dọc   ]
+          (500×750)   (500×750)
+
+Layout 5: [      Toàn Bộ Chiều Rộng      ]</code></pre>
+        
+        <hr>
+        
+        <h2>Bảng Tổng Hợp Classes</h2>
+        
+        <h3>Container Classes</h3>
+        
+        <table>
+            <tr>
+                <th>Class</th>
+                <th>Ý nghĩa</th>
+            </tr>
+            <tr>
+                <td><code>row</code></td>
+                <td>Hàng mới, chứa các cột</td>
+            </tr>
+            <tr>
+                <td><code>col-md-6</code></td>
+                <td>Cột chiếm 50% chiều rộng (md = medium trở lên)</td>
+            </tr>
+            <tr>
+                <td><code>p-1</code></td>
+                <td>Padding nhỏ xung quanh (khoảng cách giữa ảnh)</td>
+            </tr>
+            <tr>
+                <td><code>h-50</code></td>
+                <td>Chiều cao 50% của container cha</td>
+            </tr>
+            <tr>
+                <td><code>pt-2</code></td>
+                <td>Padding-top để tạo khoảng cách giữa 2 ảnh</td>
+            </tr>
+        </table>
+        
+        <h3>Image Classes</h3>
+        
+        <table>
+            <tr>
+                <th>Class</th>
+                <th>Dùng khi</th>
+            </tr>
+            <tr>
+                <td><code>img-fluid</code></td>
+                <td>Ảnh tự co giãn theo container (luôn cần)</td>
+            </tr>
+            <tr>
+                <td><code>float-end</code></td>
+                <td>Ảnh bên trái trong cặp 2 ảnh</td>
+            </tr>
+            <tr>
+                <td><code>float-start</code></td>
+                <td>Ảnh bên phải trong cặp 2 ảnh</td>
+            </tr>
+            <tr>
+                <td><code>img-horizontal</code></td>
+                <td>Ảnh ngang cần lấp đầy chiều cao</td>
+            </tr>
+            <tr>
+                <td><code>img-vertical</code></td>
+                <td>Ảnh dọc trong khung rộng (tỷ lệ 2:3)</td>
+            </tr>
+        </table>
+        
+        <h3>Fancybox Link</h3>
+        
+        <pre><code>&lt;a data-src="ĐƯỜNG-DẪN-ẢNH" data-fancybox="gallery"&gt;</code></pre>
+        
+        <hr>
+        
+        <h3>Bước 3: Cập Nhật Data File</h3>
+        
+        <p>Mở file: <code>/assets/js/projects-data.js</code></p>
+        
+        <p>Thêm entry mới vào <strong>ĐẦU MẢNG</strong> (sau dòng có chú thích):</p>
+        
+        <pre><code>{
+    id: 15,
+    name: "Tên Hiển Thị Trên Website",
+    year: "2024",
+    folder: "15-nha-mai",
+    thumbnail: "/assets/projects/15-nha-mai/00.Front-Page.JPG"
+},</code></pre>
+        
+        <div class="highlight">
+            <p><strong>Lưu ý quan trọng:</strong></p>
+            <ul>
+                <li><code>id</code>: Số thứ tự project (theo thứ tự 14, 15, 16...)</li>
+                <li><code>folder</code>: Tên folder project (phải trùng với folder trong <code>/projects/</code>)</li>
+                <li><code>thumbnail</code>: Đường dẫn đến ảnh front-page</li>
+            </ul>
+        </div>
+        
+        <hr>
+        
+        <h3>Bước 4: Kiểm Tra</h3>
+        
+        <p>Mở trình duyệt và truy cập:</p>
+        <ul>
+            <li><code>http://localhost:PORT/projects</code> - xem danh sách</li>
+            <li><code>http://localhost:PORT/projects/15-nha-mai</code> - xem project mới</li>
+        </ul>
+        
+        <hr>
+        
+        <h2>Cấu Trúc Thư Mục</h2>
+        
+        <pre><code>web1/
+├── assets/
+│   ├── projects/
+│   │   ├── 14-the-clay-resort/
+│   │   ├── 15-nha-mai/          ← Folder ảnh mới
+│   │   └── ...
+│   └── js/
+│       └── projects-data.js      ← File data (cần cập nhật)
+├── projects/
+│   ├── _template/                ← Template để copy
+│   ├── index.html                ← Trang danh sách (tự động)
+│   ├── the-clay-resort/
+│   └── 15-nha-mai/               ← Folder project mới
+│       └── index.html
+└── ...</code></pre>
+        
+        <hr>
+        
+        <h2>Checklist Trước Khi Hoàn Thành</h2>
+        
+        <ul class="checklist">
+            <li>Folder ảnh đã tạo trong <code>/assets/projects/</code></li>
+            <li>Ảnh front-page đặt tên <code>00.Front-Page.JPG</code></li>
+            <li>Folder project đã tạo trong <code>/projects/</code></li>
+            <li>File <code>index.html</code> đã chỉnh sửa đầy đủ thông tin</li>
+            <li>File <code>projects-data.js</code> đã thêm entry mới</li>
+            <li>Đã test trên trình duyệt</li>
+        </ul>
+        
+        <hr>
+        
+        <h2>Xử Lý Sự Cố</h2>
+        
+        <h3>Trang Projects không hiển thị ảnh mới?</h3>
+        
+        <p>Kiểm tra:</p>
+        <ol>
+            <li>Folder name trong <code>projects-data.js</code> có trùng với folder thực tế không?</li>
+            <li>Đường dẫn thumbnail có đúng không?</li>
+            <li>File <code>projects-data.js</code> có lỗi syntax không (thừa/thiếu dấu phẩy, ngoặc)?</li>
+        </ol>
+        
+        <h3>Ảnh không hiển thị trong project page?</h3>
+        
+        <p>Kiểm tra:</p>
+        <ol>
+            <li>Đường dẫn trong <code>data-src</code> và <code>src</code> có bắt đầu bằng <code>/</code> không?</li>
+            <li>Tên file ảnh có chính xác không (phân biệt hoa thường)?</li>
+        </ol>
+        
+        <h3>Lỗi JavaScript?</h3>
+        
+        <p>Mở DevTools (F12) → Console để xem thông báo lỗi.</p>
+        
+        <hr>
+        
+        <h2>Liên Hệ</h2>
+        
+        <p>Nếu có thắc mắc, liên hệ: <strong>Tad.atelier</strong></p>
+    </div>
+</body>
+</html>

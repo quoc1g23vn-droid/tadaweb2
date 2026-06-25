@@ -74,76 +74,145 @@ Mỗi ảnh cần 2 thay đổi:
 
 ---
 
-## Các Loại Layout Ảnh
+## Các Loại Layout Ảnh (COPY & PASTE)
 
-### Layout 1: 2 Ảnh Cạnh Nhau (Phổ Biến)
+---
 
-Mỗi hàng chứa 2 ảnh bằng nhau.
+### Layout 1: 2 Ảnh Bất Kỳ Cạnh Nhau
 
 ```html
 <div class="row">
     <div class="col-md-6 p-1">
-        <a data-src="..." data-fancybox="gallery">
-            <img src="..." class="img-fluid float-end">
+        <a data-src="/assets/projects/[FOLDER]/[ANH-1].JPG" data-fancybox="gallery">
+            <img src="/assets/projects/[FOLDER]/[ANH-1].JPG" class="img-fluid float-end">
         </a>
     </div>
     <div class="col-md-6 p-1">
-        <a data-src="..." data-fancybox="gallery">
-            <img src="..." class="img-fluid float-start">
+        <a data-src="/assets/projects/[FOLDER]/[ANH-2].JPG" data-fancybox="gallery">
+            <img src="/assets/projects/[FOLDER]/[ANH-2].JPG" class="img-fluid float-start">
         </a>
     </div>
 </div>
 ```
 
-**Sơ đồ:**
-```
-┌─────────────────────┬─────────────────────┐
-│  Ảnh 1 (float-end) │  Ảnh 2 (float-start)│
-└─────────────────────┴─────────────────────┘
-```
+**Dùng cho:** 2 ảnh bình thường, hoặc 1 ngang + 1 dọc (tự co giãn theo tỷ lệ gốc)
 
 ---
 
-### Layout 2: 1 Ảnh Dọc + 2 Ảnh Ngang (Đặc Biệt)
-
-Một ảnh dọc chiếm cột trái, 2 ảnh ngang xếp dọc trong cột phải.
+### Layout 2: 1 Ảnh Dọc (Trái) + 2 Ảnh Ngang (Phải)
 
 ```html
 <div class="row">
     <!-- Cột trái: 1 ảnh dọc -->
     <div class="col-md-6 p-1">
-        <a data-src="..." data-fancybox="gallery">
-            <img src="..." class="img-fluid float-end">
+        <a data-src="/assets/projects/[FOLDER]/[ANH-DOC].JPG" data-fancybox="gallery">
+            <img src="/assets/projects/[FOLDER]/[ANH-DOC].JPG" class="img-fluid float-end">
         </a>
     </div>
-    
+
     <!-- Cột phải: 2 ảnh ngang xếp dọc -->
     <div class="col-md-6 p-1">
         <div class="h-50">
-            <a data-src="..." data-fancybox="gallery">
-                <img src="..." class="img-fluid img-horizontal">
+            <a data-src="/assets/projects/[FOLDER]/[ANH-NGANG-1].JPG" data-fancybox="gallery">
+                <img src="/assets/projects/[FOLDER]/[ANH-NGANG-1].JPG" class="img-fluid img-horizontal">
             </a>
         </div>
         <div class="h-50 pt-2">
-            <a data-src="..." data-fancybox="gallery">
-                <img src="..." class="img-fluid img-horizontal">
+            <a data-src="/assets/projects/[FOLDER]/[ANH-NGANG-2].JPG" data-fancybox="gallery">
+                <img src="/assets/projects/[FOLDER]/[ANH-NGANG-2].JPG" class="img-fluid img-horizontal">
             </a>
         </div>
     </div>
 </div>
 ```
 
-**Sơ đồ:**
+**Dùng cho:** 1 ảnh dọc lớn bên trái, 2 ảnh ngang nhỏ bên phải
+
+---
+
+### Layout 3: 2 Ảnh Ngang (Trái) + 1 Ảnh Dọc (Phải)
+
+```html
+<div class="row">
+    <!-- Cột trái: 2 ảnh ngang xếp dọc -->
+    <div class="col-md-6 p-1">
+        <div class="h-50">
+            <a data-src="/assets/projects/[FOLDER]/[ANH-NGANG-1].JPG" data-fancybox="gallery">
+                <img src="/assets/projects/[FOLDER]/[ANH-NGANG-1].JPG" class="img-fluid img-horizontal">
+            </a>
+        </div>
+        <div class="h-50 pt-2">
+            <a data-src="/assets/projects/[FOLDER]/[ANH-NGANG-2].JPG" data-fancybox="gallery">
+                <img src="/assets/projects/[FOLDER]/[ANH-NGANG-2].JPG" class="img-fluid img-horizontal">
+            </a>
+        </div>
+    </div>
+
+    <!-- Cột phải: 1 ảnh dọc -->
+    <div class="col-md-6 p-1">
+        <a data-src="/assets/projects/[FOLDER]/[ANH-DOC].JPG" data-fancybox="gallery">
+            <img src="/assets/projects/[FOLDER]/[ANH-DOC].JPG" class="img-fluid float-start">
+        </a>
+    </div>
+</div>
 ```
-┌─────────────────────┬─────────────────────┐
-│                     │  ┌─────────────────┐│
-│                     │  │  Ảnh ngang 1    ││
-│   ẢNH DỌC          │  │  (h-50)         ││
-│   (float-end)       │  ├─────────────────┤│
-│                     │  │  Ảnh ngang 2    ││
-│                     │  │  (h-50, pt-2)   ││
-│                     │  └─────────────────┘│
-└─────────────────────┴─────────────────────┘
+
+**Dùng cho:** 2 ảnh ngang nhỏ bên trái, 1 ảnh dọc lớn bên phải
+
+---
+
+### Layout 4: 2 Ảnh Dọc Cố Định (500×750px) Cạnh Nhau
+
+```html
+<div class="row">
+    <div class="col-md-6 p-1">
+        <a data-src="/assets/projects/[FOLDER]/[ANH-DOC-1].JPG" data-fancybox="gallery">
+            <img src="/assets/projects/[FOLDER]/[ANH-DOC-1].JPG" class="img-fluid img-vertical float-end">
+        </a>
+    </div>
+    <div class="col-md-6 p-1">
+        <a data-src="/assets/projects/[FOLDER]/[ANH-DOC-2].JPG" data-fancybox="gallery">
+            <img src="/assets/projects/[FOLDER]/[ANH-DOC-2].JPG" class="img-fluid img-vertical float-start">
+        </a>
+    </div>
+</div>
+```
+
+**Dùng cho:** 2 ảnh dọc cố định kích thước 500×750px
+
+---
+
+### Layout 5: Ảnh Đơn (Full Width)
+
+```html
+<div class="row">
+    <div class="col-12 p-1">
+        <a data-src="/assets/projects/[FOLDER]/[ANH].JPG" data-fancybox="gallery">
+            <img src="/assets/projects/[FOLDER]/[ANH].JPG" class="img-fluid">
+        </a>
+    </div>
+</div>
+```
+
+**Dùng cho:** 1 ảnh chiếm toàn bộ chiều rộng
+
+---
+
+### Sơ Đồ Tổng Hợp
+
+```
+Layout 1: [    Ảnh 1    ][    Ảnh 2    ]
+
+Layout 2: [  ẢNH DỌC  ][ Ngang 1     ]
+                    [ Ngang 2     ]
+
+Layout 3: [ Ngang 1    ][  ẢNH DỌC  ]
+          [ Ngang 2    ][           ]
+
+Layout 4: [ Ảnh Dọc   ][ Ảnh Dọc   ]
+          (500×750)   (500×750)
+
+Layout 5: [      Toàn Bộ Chiều Rộng      ]
 ```
 
 ---
