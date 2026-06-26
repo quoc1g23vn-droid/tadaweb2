@@ -10,12 +10,20 @@
 // ============================================================
 
 const projectsData = [
+
+    {
+        id: 17,
+        name: "Bao Loc House",
+        year: "2024",
+        folder: "17-bao-loc-house",
+        thumbnail: "/assets/projects/17-bao-loc-house/00.Front-Page.jpg"
+    },
     {
         id: 16,
         name: "Sen House",
         year: "2024",
         folder: "16-sen-house",
-        thumbnail: "/assets/projects/16-sen-house/00.Front-Page.JPG"
+        thumbnail: "/assets/projects/16-sen-house/00.Front-Page.jpg"
     },
     {
         id: 15,
