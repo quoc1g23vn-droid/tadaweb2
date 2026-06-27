@@ -104,6 +104,38 @@ p.info {
   -ms-animation-delay: 28s;
   animation-delay: 28s;
 }
+.slideshow li:nth-child(8) span {
+  background-image: url("/assets/projects/00-front-page/11.jpg");
+  -webkit-animation-delay: 28s;
+  -moz-animation-delay: 28s;
+  -o-animation-delay: 28s;
+  -ms-animation-delay: 28s;
+  animation-delay: 28s;
+}
+.slideshow li:nth-child(8) span {
+  background-image: url("/assets/projects/00-front-page/12.jpg");
+  -webkit-animation-delay: 28s;
+  -moz-animation-delay: 28s;
+  -o-animation-delay: 28s;
+  -ms-animation-delay: 28s;
+  animation-delay: 28s;
+}
+.slideshow li:nth-child(8) span {
+  background-image: url("/assets/projects/00-front-page/13.jpg");
+  -webkit-animation-delay: 28s;
+  -moz-animation-delay: 28s;
+  -o-animation-delay: 28s;
+  -ms-animation-delay: 28s;
+  animation-delay: 28s;
+}
+.slideshow li:nth-child(8) span {
+  background-image: url("/assets/projects/00-front-page/14.jpg");
+  -webkit-animation-delay: 28s;
+  -moz-animation-delay: 28s;
+  -o-animation-delay: 28s;
+  -ms-animation-delay: 28s;
+  animation-delay: 28s;
+}
 /* Animation for the slideshow images */
 @-webkit-keyframes imageAnimation {
   0% {
